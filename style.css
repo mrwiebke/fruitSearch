@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #8EC5FC;
+  background-image: linear-gradient(125deg,  #fae94c 0%, #fa5026 80%); 
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: transparent; 
+    position: relative; /* Make the parent container relative */ 
+}
+
+.search-container input {
+  background: transparent;
+  border: 2px solid #333; /* Add a border */
+  border-radius: 5px; /* rounded corners */
+  height: 30px;
+  width: 50%;
+  font-size: 14pt;
+  padding: 5px; /* Add padding to the input field */
+  outline: none; /* Remove the default focus outline */
+
+}
+.search-container .suggestions {
+  display: none;
+  position: absolute; /* Position suggestions absolutely to avoid pushing down content */
+  width: 50%; /*make the same width as search container*/
+  max-height: 150px; /* Limit the height of suggestions for scrolling if needed */
+  overflow-y: auto; /* Add vertical scrolling for suggestions if they exceed max-height */
+  background-color: transparent; /* Suggestions background color */
+  border: 1px solid #ccc; /* Add a border for suggestions */
+  border-radius: 5px; /* Rounded corners for suggestions */
+  z-index: 1; /* Ensure the suggestions appear above other content */
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+}
+
+.suggestions{
+  top: 52%; /*to make the dropdown box appear under the search bar*/
+}
+
+ul {
+  list-style: none; /* Remove bullet points from the list */
+  padding: 0;
+}
+
+ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+ul li:hover {
+  background-color: #f26f28; /* Highlight suggestion on hover */
+}
+
+input {
+  border-color: #007BFF; /* Change the border color on focus */
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5); /* Add a box shadow on focus */
+}
